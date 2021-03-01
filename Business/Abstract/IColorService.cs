@@ -8,7 +8,7 @@ namespace Business.Abstract
 {
     public interface IColorService
     {
-        IDataResult<Color> GetAll();
+        IDataResult<List<Color>> GetAll();
         IDataResult<Color> GetById(int colorId);
     }
 }

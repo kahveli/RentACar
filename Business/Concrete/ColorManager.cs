@@ -20,9 +20,9 @@ namespace Business.Concrete
             _colorDal = colorDal;
         }
 
-        public IDataResult<Color> GetAll()
+        public IDataResult<List<Color>> GetAll()
         {
-            return new SuccessDataResult<Color>();
+            return new SuccessDataResult<List<Color>>(_colorDal.GetAll());
         }
 
         public IDataResult<Color> GetById(int colorId)

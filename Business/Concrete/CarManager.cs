@@ -47,12 +47,12 @@ namespace Business.Concrete
 
         public IDataResult<List<Car>> GetAll()
         {
-            if (DateTime.Now.Hour==11)
-            {
-                return new ErrorDataResult<List<Car>>(Messages.CarAdded);
-            }
+            //if (DateTime.Now.Hour==11)
+            //{
+            //    return new ErrorDataResult<List<Car>>(Messages.CarAdded);
+            //}
 
-            return new SuccessDataResult<List<Car>>();
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll());
         }
 
         public IDataResult<List<Car>> GetCarByBrandId(int brandId)

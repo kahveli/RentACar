@@ -17,8 +17,7 @@ namespace ConsoleUI
 
             // hata döndürmesi için değeri null girdim.
             //RentalTest();
-
-            // CustomerTest();
+            CustomerTest();
         }
 
         private static void RentalTest()
@@ -31,7 +30,7 @@ namespace ConsoleUI
         private static void CustomerTest()
         {
             var customerManager = new CustomerManager(new EfCustomerDal());
-            customerManager.Add(new Customer {CompanyName = "kodlama.io"});
+            customerManager.Add(new Customer {CustomerId = 21,CompanyName = "Googleee"});
         }
 
         private static void ColorManager()
